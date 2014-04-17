@@ -9,7 +9,7 @@ Kickstart for a Symfony Deploymentscript based on EasyDeployWorkflows
 * Rename "YOURPROJECTNAME" to the real name of your project
 
     * Rename Folder in "Configuration" Folder
-    * Rename $project variabke in deploy.php
+    * Rename $project variable in deploy.php
     * Configure correct Source in Configuration/YOURPROJECTNAME/local.php
 
 * Delete "vendor" from .gitignore folder
@@ -17,10 +17,12 @@ Kickstart for a Symfony Deploymentscript based on EasyDeployWorkflows
 
 2) Test and tune your deployment script
 ----------------------------
-Prepare your infrastructure:
+### Prepare your infrastructure:
 * Create a release folder (This is where new releaseversions are installed to)
 * Create a vHost and be sure the webroot symlinks to the /releases/current symlink
 * If your application needs more from the infrastructure, then prepare this (e.g. Databases and Access...)
+
+-----------------------
 
 Create a script "set_YOURPROJECTNAME_dependencies.sh" (or something comparable) that exposes the relevant environmentvariables, that the deployment and the installation needs to know:
 ::
@@ -34,7 +36,7 @@ Create a script "set_YOURPROJECTNAME_dependencies.sh" (or something comparable) 
 	export DBNAME=***
 
 
-Run your deployment:
+### Run your deployment:
 ::
 
   git clone YOURREMOTEDEPLOYMENTREPOSITORY
