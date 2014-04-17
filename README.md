@@ -25,7 +25,7 @@ Kickstart for a Symfony Deploymentscript based on EasyDeployWorkflows
 -----------------------
 
 Create a script "set_YOURPROJECTNAME_dependencies.sh" (or something comparable) that exposes the relevant environmentvariables, that the deployment and the installation needs to know:
-::
+
 
 	#!/bin/bash
 	export RELEASEBASEFOLDER=/delivery
@@ -37,9 +37,9 @@ Create a script "set_YOURPROJECTNAME_dependencies.sh" (or something comparable) 
 
 
 ### Run your deployment:
-::
 
-  git clone YOURREMOTEDEPLOYMENTREPOSITORY
-  set_YOURPROJECTNAME_dependencies.sh
-  php deploy.php --version=1 --environment=local
+
+	git clone YOURREMOTEDEPLOYMENTREPOSITORY
+	set_YOURPROJECTNAME_dependencies.sh
+	php deploy.php --version=1 --environment=local
 
